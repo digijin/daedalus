@@ -4,7 +4,9 @@
   "description": "Daedalus is a mythical Greek inventor and problem solver",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check-types": "tsc",
+    "build": "babel --extensions .ts ./src -d ./dist"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/digijin/daedalus/issues"
   },
-  "homepage": "https://github.com/digijin/daedalus#readme"
+  "homepage": "https://github.com/digijin/daedalus#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.5",
+    "@babel/preset-typescript": "^7.18.6",
+    "typescript": "^4.9.3"
+  }
 }
