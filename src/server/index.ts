@@ -1,3 +1,4 @@
-import app from './app'
-console.log(app);
-console.log('done.')
+import App from "./app";
+const app = new App();
+app.start(81);
+console.log("done.");

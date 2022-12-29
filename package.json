@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "check-types": "tsc",
-    "build": "babel --extensions .ts ./src -d ./dist"
+    "build": "babel --extensions .ts ./src -d ./dist",
+    "server": "node ./dist/server/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,11 @@
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.20.5",
     "@babel/preset-typescript": "^7.18.6",
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20",
     "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
