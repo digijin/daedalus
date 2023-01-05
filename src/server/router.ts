@@ -1,7 +1,11 @@
 import { Express } from "express";
+import routes from "./routes";
+
+import * as express from "express";
 
 export default function router(app: Express) {
-  app.get("/", (req, res) => {
-    res.send("Hello World!");
+  app.use(express.static("../static"));
+  routes.forEach((route) => {
+    route(app);
   });
 }
